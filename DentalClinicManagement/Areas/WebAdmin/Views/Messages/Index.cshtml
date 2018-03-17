@@ -1,0 +1,56 @@
+﻿@model IEnumerable<DentalClinicManagement.Models.Message>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/WebAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-md-12 col-sm-12">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    User Name
+                </th>
+                <th>
+                    User Email
+                </th>
+                <th>
+                    Message Subject
+                </th>
+                <th>
+                    Message Text
+                </th>
+
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.user_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.user_email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.message_subject)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.message_text)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>
+    </div>
+    </div>

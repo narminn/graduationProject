@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="440ac36d65f24a0fae9e88bc6172a02b" Name="Diagram1">
+      <Diagram DiagramId="351cf59b2d614651a82f50c8460d11ba" Name="Diagram1">
         <EntityTypeShape EntityType="graduationProjectModel.Appointment" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
         <EntityTypeShape EntityType="graduationProjectModel.Award" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
         <EntityTypeShape EntityType="graduationProjectModel.Customer_quotes" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
@@ -29,7 +29,6 @@
         <EntityTypeShape EntityType="graduationProjectModel.Stuff_Attendence" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="graduationProjectModel.Supplier" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
         <EntityTypeShape EntityType="graduationProjectModel.User_Roles" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="graduationProjectModel.UserLogin" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
         <AssociationConnector Association="graduationProjectModel.FK_Appointment_Appointment" ManuallyRouted="false" />
         <AssociationConnector Association="graduationProjectModel.FK_Appointment_Doctors" ManuallyRouted="false" />
         <AssociationConnector Association="graduationProjectModel.FK_Awards_Doctors" ManuallyRouted="false" />

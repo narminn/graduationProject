@@ -11,12 +11,16 @@ namespace DentalClinicManagement.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel;
+    using System.ComponentModel.DataAnnotations;
+
     public partial class User_Roles
     {
         public int id { get; set; }
+        [DisplayName("User Name")]
         public string user_role_name { get; set; }
         public string user_role_mail { get; set; }
         public string user_role_password { get; set; }
+       public string LoginErrorMessage { get; set; }
     }
 }
