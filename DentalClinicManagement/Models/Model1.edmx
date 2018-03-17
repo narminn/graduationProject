@@ -243,15 +243,6 @@
           <Property Name="user_role_mail" Type="nvarchar" MaxLength="50" />
           <Property Name="user_role_password" Type="nvarchar" MaxLength="50" />
         </EntityType>
-        <EntityType Name="UserLogin">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="admin_username" Type="nvarchar" MaxLength="50" />
-          <Property Name="admin_password" Type="nvarchar" MaxLength="50" />
-          <Property Name="admin_mail" Type="nvarchar" MaxLength="50" />
-        </EntityType>
         <Association Name="FK_Appointment_Appointment">
           <End Role="Appointment" Type="Self.Appointment" Multiplicity="1" />
           <End Role="Appointment1" Type="Self.Appointment" Multiplicity="0..1" />
@@ -433,7 +424,6 @@
           <EntitySet Name="Stuff_Attendence" EntityType="Self.Stuff_Attendence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="Suppliers" EntityType="Self.Suppliers" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="User_Roles" EntityType="Self.User_Roles" Schema="dbo" store:Type="Tables" />
-          <EntitySet Name="UserLogin" EntityType="Self.UserLogin" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_Appointment_Appointment" Association="Self.FK_Appointment_Appointment">
             <End Role="Appointment" EntitySet="Appointment" />
             <End Role="Appointment1" EntitySet="Appointment" />
@@ -756,15 +746,6 @@
           <Property Name="user_role_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="user_role_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
-        <EntityType Name="UserLogin">
-          <Key>
-            <PropertyRef Name="id" />
-          </Key>
-          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="admin_username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="admin_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="admin_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-        </EntityType>
         <Association Name="FK_Appointment_Appointment">
           <End Role="Appointment" Type="Self.Appointment" Multiplicity="1" />
           <End Role="Appointment1" Type="Self.Appointment" Multiplicity="0..1" />
@@ -946,7 +927,6 @@
           <EntitySet Name="Stuff_Attendence" EntityType="Self.Stuff_Attendence" />
           <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
           <EntitySet Name="User_Roles" EntityType="Self.User_Roles" />
-          <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
           <AssociationSet Name="FK_Appointment_Appointment" Association="Self.FK_Appointment_Appointment">
             <End Role="Appointment" EntitySet="Appointments" />
             <End Role="Appointment1" EntitySet="Appointments" />
@@ -1265,16 +1245,6 @@
                 <ScalarProperty Name="user_role_name" ColumnName="user_role_name" />
                 <ScalarProperty Name="user_role_mail" ColumnName="user_role_mail" />
                 <ScalarProperty Name="user_role_password" ColumnName="user_role_password" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="UserLogins">
-            <EntityTypeMapping TypeName="graduationProjectModel.UserLogin">
-              <MappingFragment StoreEntitySet="UserLogin">
-                <ScalarProperty Name="id" ColumnName="id" />
-                <ScalarProperty Name="admin_username" ColumnName="admin_username" />
-                <ScalarProperty Name="admin_password" ColumnName="admin_password" />
-                <ScalarProperty Name="admin_mail" ColumnName="admin_mail" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

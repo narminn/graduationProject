@@ -151,111 +151,117 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Accountant\AccountantAreaRegistration.cs" />
+    <Compile Include="Areas\Accountant\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Accountant\Controllers\SignController.cs" />
     <Compile Include="Areas\Doctor\DoctorAreaRegistration.cs" />
     <Compile Include="Areas\ManagementAdmin\ManagementAdminAreaRegistration.cs" />
     <Compile Include="Areas\Reception\ReceptionAreaRegistration.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\Customer_quotesController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\Dental_clinic_detailsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\LinksController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\MessagesController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\NewsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\Open_hoursController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\PhotosController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\ServicesController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\SuppliersController.cs" />
     <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Appointment.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Award.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Customer_quotes.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DentalClinicModel.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DentalClinicModel.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DentalClinicModel.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\DentalClinicModel.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Dental_clinic_details.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Department.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Doctor.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Doctor_Attendence.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Expense.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Gender.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Holiday.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Leave.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Link.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\MarrigeStatu.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Message.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
     </Compile>
     <Compile Include="Models\News.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Note.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Open_hours.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Patient.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Photo.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Service.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Stuff_Atendes.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Stuff_Attendence.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\Supplier.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Models\UserLogin.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\User_Roles.cs">
-      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Areas\Accountant\css\main.css" />
     <Content Include="Assets\css\style.css" />
     <Content Include="Assets\images\4373750.jpg" />
     <Content Include="Assets\images\about.jpg" />
@@ -314,16 +320,6 @@
     <Content Include="Assets\js\script.js" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
-    <Content Include="Models\DentalClinicModel.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>DentalClinicModel.Context.cs</LastGenOutput>
-      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
-    </Content>
-    <Content Include="Models\DentalClinicModel.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
-      <LastGenOutput>DentalClinicModel.cs</LastGenOutput>
-    </Content>
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
@@ -332,6 +328,16 @@
     <Content Include="Areas\Doctor\Views\web.config" />
     <Content Include="Areas\Accountant\Views\web.config" />
     <Content Include="Areas\Reception\Views\web.config" />
+    <Content Include="Models\Model1.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Model1.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.cs</LastGenOutput>
+    </Content>
     <Content Include="WebAdminAssets\css\sb-admin.css" />
     <Content Include="WebAdminAssets\css\sb-admin.min.css" />
     <Content Include="WebAdminAssets\js\sb-admin-charts.js" />
@@ -402,13 +408,6 @@
     <Content Include="WebAdminAssets\vendor\jquery\jquery.min.js" />
     <Content Include="WebAdminAssets\vendor\jquery\jquery.slim.js" />
     <Content Include="WebAdminAssets\vendor\jquery\jquery.slim.min.js" />
-    <EntityDeploy Include="Models\DentalClinicModel.edmx">
-      <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>DentalClinicModel.Designer.cs</LastGenOutput>
-    </EntityDeploy>
-    <Content Include="Models\DentalClinicModel.edmx.diagram">
-      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
-    </Content>
     <Content Include="Areas\WebAdmin\Views\_ViewStart.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Shared\_Layout.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Home\Index.cshtml" />
@@ -453,8 +452,8 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Areas\Accountant\Controllers\" />
     <Folder Include="Areas\Accountant\Models\" />
+    <Folder Include="Areas\Accountant\Views\Home\" />
     <Folder Include="Areas\Accountant\Views\Shared\" />
     <Folder Include="Areas\Doctor\Controllers\" />
     <Folder Include="Areas\Doctor\Models\" />
@@ -485,6 +484,44 @@
     <Content Include="Areas\WebAdmin\Views\Open_hours\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Open_hours\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Open_hours\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Photos\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Photos\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Photos\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Photos\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Photos\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Services\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Services\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Services\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Services\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Services\Index.cshtml" />
+    <EntityDeploy Include="Models\Model1.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Model1.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Model1.edmx.diagram">
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\WebAdmin\Views\Suppliers\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Suppliers\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Suppliers\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Suppliers\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Suppliers\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Links\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Links\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Links\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Links\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Links\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Messages\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Messages\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Messages\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Messages\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Messages\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Customer_quotes\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Customer_quotes\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Customer_quotes\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Customer_quotes\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Customer_quotes\Index.cshtml" />
+    <Content Include="Areas\Accountant\Views\Sign\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\HeaderPartial.cshtml" />
     <Content Include="Views\Home\Booking.cshtml" />

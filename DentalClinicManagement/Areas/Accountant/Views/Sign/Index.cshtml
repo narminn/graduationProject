@@ -1,0 +1,37 @@
+﻿@model DentalClinicManagement.Models.User_Roles
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <link href="~/Areas/Accountant/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="login">
+        @using (Html.BeginForm("Authorize", "Sign",FormMethod.Post))
+        {
+
+
+        <h1>Login</h1>
+        <form method="post">
+            <input type="text" name="u" placeholder="Username" required="required" />
+            <input type="password" name="p" placeholder="Password" required="required" />
+            <button type="submit" class="btn btn-primary btn-block btn-large">Sign In </button>
+        </form>
+        <br>
+        <!-- login bootsnipp -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-9155049400353686"
+             data-ad-slot="9589048256"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+        }
+    </div>
+</body>
+</html>
+
+
+<!------ Include the above in your HEAD tag ---------->

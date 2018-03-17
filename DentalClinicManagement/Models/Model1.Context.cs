@@ -49,6 +49,5 @@ namespace DentalClinicManagement.Models
         public virtual DbSet<Stuff_Attendence> Stuff_Attendence { get; set; }
         public virtual DbSet<Supplier> Suppliers { get; set; }
         public virtual DbSet<User_Roles> User_Roles { get; set; }
-        public virtual DbSet<UserLogin> UserLogins { get; set; }
     }
 }

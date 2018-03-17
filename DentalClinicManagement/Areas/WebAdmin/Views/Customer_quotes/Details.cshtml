@@ -1,0 +1,35 @@
+﻿@model DentalClinicManagement.Models.Customer_quotes
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/WebAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Customer_quotes</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_name)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.customer_quote_text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.customer_quote_text)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
