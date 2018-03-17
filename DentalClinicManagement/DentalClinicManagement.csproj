@@ -157,6 +157,7 @@
     <Compile Include="Areas\WebAdmin\Controllers\Dental_clinic_detailsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\Open_hoursController.cs" />
     <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
@@ -479,6 +480,11 @@
     <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Open_hours\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Open_hours\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Open_hours\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Open_hours\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Open_hours\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\HeaderPartial.cshtml" />
     <Content Include="Views\Home\Booking.cshtml" />
