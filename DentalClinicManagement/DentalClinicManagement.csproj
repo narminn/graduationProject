@@ -154,6 +154,7 @@
     <Compile Include="Areas\Doctor\DoctorAreaRegistration.cs" />
     <Compile Include="Areas\ManagementAdmin\ManagementAdminAreaRegistration.cs" />
     <Compile Include="Areas\Reception\ReceptionAreaRegistration.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\Dental_clinic_detailsController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\HomeController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\NewsController.cs" />
     <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
@@ -473,6 +474,11 @@
     <Content Include="Areas\WebAdmin\Views\News\Details.cshtml" />
     <Content Include="Areas\WebAdmin\Views\News\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\News\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Dental_clinic_details\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\HeaderPartial.cshtml" />
     <Content Include="Views\Home\Booking.cshtml" />
