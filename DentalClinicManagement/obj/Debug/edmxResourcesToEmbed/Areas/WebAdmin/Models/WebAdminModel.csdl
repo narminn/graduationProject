@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="graduationProjectModel1" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Appointment">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="patient_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="patient_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_id" Type="Int32" />
+    <Property Name="appoint_date" Type="DateTime" Precision="3" />
+    <Property Name="appoint_hour" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Appointment1" Relationship="Self.FK_Appointment_Appointment" FromRole="Appointment" ToRole="Appointment1" />
+    <NavigationProperty Name="Appointment2" Relationship="Self.FK_Appointment_Appointment" FromRole="Appointment1" ToRole="Appointment" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Appointment_Doctors" FromRole="Appointment" ToRole="Doctors" />
+  </EntityType>
+  <EntityType Name="Award">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="award_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="award_price" Type="Int32" />
+    <Property Name="award_date" Type="DateTime" Precision="3" />
+    <Property Name="award_doctor_id" Type="Int32" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Awards_Doctors" FromRole="Awards" ToRole="Doctors" />
+  </EntityType>
+  <EntityType Name="Customer_quotes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="customer_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="customer_quote_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Dental_clinic_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="clinic_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_about" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_slogan" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_history" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_ceo_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="clinic_open_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Department">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="department_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctors" Relationship="Self.FK_Doctors_Departments" FromRole="Departments" ToRole="Doctors" />
+  </EntityType>
+  <EntityType Name="Doctor_Attendence">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stuff_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stuff_gender_id" Type="Int32" />
+    <Property Name="stuff_marriage_status_id" Type="Int32" />
+    <Property Name="stuff_salary" Type="Int32" />
+    <Property Name="stuff_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stuff_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stuff_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stuff_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="stuff_start_date" Type="DateTime" Precision="3" />
+    <Property Name="stuff_begin_time" Type="DateTime" Precision="3" />
+    <Property Name="stuff_end_time" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Stuff_Gender" FromRole="Doctor_Attendence" ToRole="Gender" />
+    <NavigationProperty Name="MarrigeStatu" Relationship="Self.FK_Stuff_MarrigeStatus" FromRole="Doctor_Attendence" ToRole="MarrigeStatus" />
+  </EntityType>
+  <EntityType Name="Doctor">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctor_fullname" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_about" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_address" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_depart_id" Type="Int32" />
+    <Property Name="doctor_education_file" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="doctor_salary" Type="Int32" />
+    <Property Name="doctor_marrige_status_id" Type="Int32" />
+    <Property Name="doctor_begin_time" Type="DateTime" Precision="3" />
+    <Property Name="doctor_start_time" Type="DateTime" Precision="3" />
+    <Property Name="doctor_start_date" Type="DateTime" Precision="3" />
+    <Property Name="doctor_date_of_birth" Type="DateTime" Precision="3" />
+    <Property Name="doctor_gender_id" Type="Int32" />
+    <NavigationProperty Name="Appointments" Relationship="Self.FK_Appointment_Doctors" FromRole="Doctors" ToRole="Appointment" />
+    <NavigationProperty Name="Awards" Relationship="Self.FK_Awards_Doctors" FromRole="Doctors" ToRole="Awards" />
+    <NavigationProperty Name="Department" Relationship="Self.FK_Doctors_Departments" FromRole="Doctors" ToRole="Departments" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Doctors_Gender" FromRole="Doctors" ToRole="Gender" />
+    <NavigationProperty Name="MarrigeStatu" Relationship="Self.FK_Doctors_MarrigeStatus" FromRole="Doctors" ToRole="MarrigeStatus" />
+    <NavigationProperty Name="Leaves" Relationship="Self.FK_Leave_Doctors" FromRole="Doctors" ToRole="Leave" />
+  </EntityType>
+  <EntityType Name="Expense">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="product_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="product_price" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="expense_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Gender">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="gender_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor_Attendence" Relationship="Self.FK_Stuff_Gender" FromRole="Gender" ToRole="Doctor_Attendence" />
+    <NavigationProperty Name="Doctors" Relationship="Self.FK_Doctors_Gender" FromRole="Gender" ToRole="Doctors" />
+    <NavigationProperty Name="Patients" Relationship="Self.FK_Patients_Gender" FromRole="Gender" ToRole="Patients" />
+  </EntityType>
+  <EntityType Name="Holiday">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="holiday_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="holiday_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Leave">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctor_id" Type="Int32" />
+    <Property Name="leave_reason" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="leave_date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Doctor" Relationship="Self.FK_Leave_Doctors" FromRole="Leave" ToRole="Doctors" />
+  </EntityType>
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="link1" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="icon" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="MarrigeStatu">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="status_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Doctor_Attendence" Relationship="Self.FK_Stuff_MarrigeStatus" FromRole="MarrigeStatus" ToRole="Doctor_Attendence" />
+    <NavigationProperty Name="Doctors" Relationship="Self.FK_Doctors_MarrigeStatus" FromRole="MarrigeStatus" ToRole="Doctors" />
+    <NavigationProperty Name="Patients" Relationship="Self.FK_Patients_MarrigeStatus" FromRole="MarrigeStatus" ToRole="Patients" />
+  </EntityType>
+  <EntityType Name="Message">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="message_subject" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="message_text" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="News">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="news_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="news_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="news_date" Type="DateTime" Precision="3" />
+    <Property Name="news_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Note">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="note_title" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="note_content" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="note_date" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Open_hours">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="schedule" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="hours" Type="DateTime" Precision="3" />
+  </EntityType>
+  <EntityType Name="Patient">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="patient_fullname" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="patient_gender_id" Type="Int32" />
+    <Property Name="patient_marriage_status_id" Type="Int32" />
+    <Property Name="patient_phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="patient_address" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="patient_email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="patient_payment" Type="Int32" />
+    <Property Name="date" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="Gender" Relationship="Self.FK_Patients_Gender" FromRole="Patients" ToRole="Gender" />
+    <NavigationProperty Name="MarrigeStatu" Relationship="Self.FK_Patients_MarrigeStatus" FromRole="Patients" ToRole="MarrigeStatus" />
+  </EntityType>
+  <EntityType Name="Photo">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="photo_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="photo_file" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Service">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="services_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="services_about" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="services_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Stuff_Atendes">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="doctor_status" Type="Boolean" />
+    <Property Name="doctor_id" Type="Int32" />
+    <NavigationProperty Name="Stuff_Atendes1" Relationship="Self.FK_Stuff_Atendes_Stuff_Atendes" FromRole="Stuff_Atendes" ToRole="Stuff_Atendes1" />
+    <NavigationProperty Name="Stuff_Atendes2" Relationship="Self.FK_Stuff_Atendes_Stuff_Atendes" FromRole="Stuff_Atendes1" ToRole="Stuff_Atendes" />
+  </EntityType>
+  <EntityType Name="Stuff_Attendence">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="stuff_id" Type="Int32" />
+    <Property Name="stuff_status" Type="Boolean" />
+    <NavigationProperty Name="Stuff_Attendence1" Relationship="Self.FK_Stuff_Attendence_Stuff_Attendence" FromRole="Stuff_Attendence" ToRole="Stuff_Attendence1" />
+    <NavigationProperty Name="Stuff_Attendence2" Relationship="Self.FK_Stuff_Attendence_Stuff_Attendence" FromRole="Stuff_Attendence1" ToRole="Stuff_Attendence" />
+  </EntityType>
+  <EntityType Name="Supplier">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="supplier_photo" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="User_Roles">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="user_role_name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_role_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="user_role_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <EntityType Name="UserLogin">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="admin_username" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="admin_mail" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+  </EntityType>
+  <Association Name="FK_Appointment_Appointment">
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="1" />
+    <End Role="Appointment1" Type="Self.Appointment" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="Appointment">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment1">
+        <PropertyRef Name="id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Appointment_Doctors">
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="0..1" />
+    <End Role="Appointment" Type="Self.Appointment" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Appointment">
+        <PropertyRef Name="doctor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Awards_Doctors">
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="0..1" />
+    <End Role="Awards" Type="Self.Award" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Awards">
+        <PropertyRef Name="award_doctor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctors_Departments">
+    <End Role="Departments" Type="Self.Department" Multiplicity="0..1" />
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Departments">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doctors">
+        <PropertyRef Name="doctor_depart_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Doctor_Attendence" Type="Self.Doctor_Attendence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doctor_Attendence">
+        <PropertyRef Name="stuff_gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_MarrigeStatus">
+    <End Role="MarrigeStatus" Type="Self.MarrigeStatu" Multiplicity="0..1" />
+    <End Role="Doctor_Attendence" Type="Self.Doctor_Attendence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarrigeStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doctor_Attendence">
+        <PropertyRef Name="stuff_marriage_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctors_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doctors">
+        <PropertyRef Name="doctor_gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Doctors_MarrigeStatus">
+    <End Role="MarrigeStatus" Type="Self.MarrigeStatu" Multiplicity="0..1" />
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarrigeStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Doctors">
+        <PropertyRef Name="doctor_marrige_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Leave_Doctors">
+    <End Role="Doctors" Type="Self.Doctor" Multiplicity="0..1" />
+    <End Role="Leave" Type="Self.Leave" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Doctors">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Leave">
+        <PropertyRef Name="doctor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patients_Gender">
+    <End Role="Gender" Type="Self.Gender" Multiplicity="0..1" />
+    <End Role="Patients" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Gender">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Patients">
+        <PropertyRef Name="patient_gender_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Patients_MarrigeStatus">
+    <End Role="MarrigeStatus" Type="Self.MarrigeStatu" Multiplicity="0..1" />
+    <End Role="Patients" Type="Self.Patient" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="MarrigeStatus">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Patients">
+        <PropertyRef Name="patient_marriage_status_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_Atendes_Stuff_Atendes">
+    <End Role="Stuff_Atendes" Type="Self.Stuff_Atendes" Multiplicity="0..1" />
+    <End Role="Stuff_Atendes1" Type="Self.Stuff_Atendes" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stuff_Atendes">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Stuff_Atendes1">
+        <PropertyRef Name="doctor_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Stuff_Attendence_Stuff_Attendence">
+    <End Role="Stuff_Attendence" Type="Self.Stuff_Attendence" Multiplicity="0..1" />
+    <End Role="Stuff_Attendence1" Type="Self.Stuff_Attendence" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Stuff_Attendence">
+        <PropertyRef Name="id" />
+      </Principal>
+      <Dependent Role="Stuff_Attendence1">
+        <PropertyRef Name="stuff_id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="graduationProjectEntities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Appointments" EntityType="Self.Appointment" />
+    <EntitySet Name="Awards" EntityType="Self.Award" />
+    <EntitySet Name="Customer_quotes" EntityType="Self.Customer_quotes" />
+    <EntitySet Name="Dental_clinic_details" EntityType="Self.Dental_clinic_details" />
+    <EntitySet Name="Departments" EntityType="Self.Department" />
+    <EntitySet Name="Doctor_Attendence" EntityType="Self.Doctor_Attendence" />
+    <EntitySet Name="Doctors" EntityType="Self.Doctor" />
+    <EntitySet Name="Expenses" EntityType="Self.Expense" />
+    <EntitySet Name="Genders" EntityType="Self.Gender" />
+    <EntitySet Name="Holidays" EntityType="Self.Holiday" />
+    <EntitySet Name="Leaves" EntityType="Self.Leave" />
+    <EntitySet Name="Links" EntityType="Self.Link" />
+    <EntitySet Name="MarrigeStatus" EntityType="Self.MarrigeStatu" />
+    <EntitySet Name="Messages" EntityType="Self.Message" />
+    <EntitySet Name="News" EntityType="Self.News" />
+    <EntitySet Name="Notes" EntityType="Self.Note" />
+    <EntitySet Name="Open_hours" EntityType="Self.Open_hours" />
+    <EntitySet Name="Patients" EntityType="Self.Patient" />
+    <EntitySet Name="Photos" EntityType="Self.Photo" />
+    <EntitySet Name="Services" EntityType="Self.Service" />
+    <EntitySet Name="Stuff_Atendes" EntityType="Self.Stuff_Atendes" />
+    <EntitySet Name="Stuff_Attendence" EntityType="Self.Stuff_Attendence" />
+    <EntitySet Name="Suppliers" EntityType="Self.Supplier" />
+    <EntitySet Name="User_Roles" EntityType="Self.User_Roles" />
+    <EntitySet Name="UserLogins" EntityType="Self.UserLogin" />
+    <AssociationSet Name="FK_Appointment_Appointment" Association="Self.FK_Appointment_Appointment">
+      <End Role="Appointment" EntitySet="Appointments" />
+      <End Role="Appointment1" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Appointment_Doctors" Association="Self.FK_Appointment_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Appointment" EntitySet="Appointments" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Awards_Doctors" Association="Self.FK_Awards_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Awards" EntitySet="Awards" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctors_Departments" Association="Self.FK_Doctors_Departments">
+      <End Role="Departments" EntitySet="Departments" />
+      <End Role="Doctors" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_Gender" Association="Self.FK_Stuff_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Doctor_Attendence" EntitySet="Doctor_Attendence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_MarrigeStatus" Association="Self.FK_Stuff_MarrigeStatus">
+      <End Role="MarrigeStatus" EntitySet="MarrigeStatus" />
+      <End Role="Doctor_Attendence" EntitySet="Doctor_Attendence" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctors_Gender" Association="Self.FK_Doctors_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Doctors" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Doctors_MarrigeStatus" Association="Self.FK_Doctors_MarrigeStatus">
+      <End Role="MarrigeStatus" EntitySet="MarrigeStatus" />
+      <End Role="Doctors" EntitySet="Doctors" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Leave_Doctors" Association="Self.FK_Leave_Doctors">
+      <End Role="Doctors" EntitySet="Doctors" />
+      <End Role="Leave" EntitySet="Leaves" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patients_Gender" Association="Self.FK_Patients_Gender">
+      <End Role="Gender" EntitySet="Genders" />
+      <End Role="Patients" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Patients_MarrigeStatus" Association="Self.FK_Patients_MarrigeStatus">
+      <End Role="MarrigeStatus" EntitySet="MarrigeStatus" />
+      <End Role="Patients" EntitySet="Patients" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_Atendes_Stuff_Atendes" Association="Self.FK_Stuff_Atendes_Stuff_Atendes">
+      <End Role="Stuff_Atendes" EntitySet="Stuff_Atendes" />
+      <End Role="Stuff_Atendes1" EntitySet="Stuff_Atendes" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Stuff_Attendence_Stuff_Attendence" Association="Self.FK_Stuff_Attendence_Stuff_Attendence">
+      <End Role="Stuff_Attendence" EntitySet="Stuff_Attendence" />
+      <End Role="Stuff_Attendence1" EntitySet="Stuff_Attendence" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

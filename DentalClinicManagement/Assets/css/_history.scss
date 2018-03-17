@@ -1,0 +1,33 @@
+#history{
+	width: 100%;
+	.container{
+		.row{
+			.historyImage{
+				margin-top: 50px;
+				width: 100%;
+				height: 100%;
+				img{
+					width: 100%;
+					height: auto;
+				}
+			}
+			.historyContent{
+				margin-top: 80px;
+				margin-left: 60px;
+				p{
+					font-size: 35px;
+
+				}
+				span{
+					font-size: 18px;
+				}
+				.ceo{
+					font-size: 18px;
+					
+					margin-top: 20px;
+					font-style: italic;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="440ac36d65f24a0fae9e88bc6172a02b" Name="Diagram1">
+        <EntityTypeShape EntityType="graduationProjectModel.Appointment" Width="1.5" PointX="8.25" PointY="5.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Award" Width="1.5" PointX="8.25" PointY="9.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Customer_quotes" Width="1.5" PointX="4.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Dental_clinic_details" Width="1.5" PointX="6.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Department" Width="1.5" PointX="3.75" PointY="13.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Doctor_Attendence" Width="1.5" PointX="3" PointY="8.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Doctor" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Expense" Width="1.5" PointX="8.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Gender" Width="1.5" PointX="0.75" PointY="9.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Holiday" Width="1.5" PointX="10.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Leave" Width="1.5" PointX="8.25" PointY="12.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Link" Width="1.5" PointX="10.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.MarrigeStatu" Width="1.5" PointX="0.75" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Message" Width="1.5" PointX="10.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.News" Width="1.5" PointX="10.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Note" Width="1.5" PointX="12.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Open_hours" Width="1.5" PointX="0.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Patient" Width="1.5" PointX="3" PointY="3.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Photo" Width="1.5" PointX="12.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Service" Width="1.5" PointX="12.75" PointY="6.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Stuff_Atendes" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Stuff_Attendence" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.Supplier" Width="1.5" PointX="12.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.User_Roles" Width="1.5" PointX="10.75" PointY="12.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="graduationProjectModel.UserLogin" Width="1.5" PointX="12.75" PointY="12.75" IsExpanded="true" />
+        <AssociationConnector Association="graduationProjectModel.FK_Appointment_Appointment" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Appointment_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Awards_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Doctors_Departments" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Stuff_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Stuff_MarrigeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Doctors_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Doctors_MarrigeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Leave_Doctors" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Patients_Gender" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Patients_MarrigeStatus" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Stuff_Atendes_Stuff_Atendes" ManuallyRouted="false" />
+        <AssociationConnector Association="graduationProjectModel.FK_Stuff_Attendence_Stuff_Attendence" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

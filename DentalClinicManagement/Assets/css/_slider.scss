@@ -1,0 +1,29 @@
+
+.test{
+  background-image: url("../images/slide2.jpg");
+  height: 100vh;
+     background-position: center;
+     background-repeat: no-repeat;
+     background-size: cover;
+     h1{
+       color: #fff;
+       margin: 0;
+       font-size: 3.3em;
+       line-height: 60px;
+     }
+     p{
+       color: #fff;
+       line-height: 30px;
+       font-size: 1em;
+     }
+}
+.reset_row{
+  margin-bottom: -6em;
+}
+.contact_us{
+  border-radius:40px !important;
+  padding: 10px 35px;
+  background: #80dfff;
+  font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
+}

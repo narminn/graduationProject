@@ -1,0 +1,104 @@
+﻿
+@{
+    ViewBag.Title = "Single";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+<section id="singleMain">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-8 col-sm-12 col-xs-12">
+                <div class="singleNews">
+                    <div class="singleNewsTitle">
+                        <h1>Fusce Ut Hendrerit Ex, Nec Rutrum Nunc.</h1>
+                    </div>
+                    <div class="post">
+                        <p>BY Danial</p>
+                        <div class="calendar">
+                            <i class="far fa-calendar-alt"></i>
+                            <p>DECEMBER 27, 2017</p>
+                        </div>
+                        <div class="folder">
+                            <i class="far fa-folder"></i>
+                            <p>NEWS</p>
+                        </div>
+                        <div class="comment">
+                            <p>1</p>
+                            <i class="far fa-comment"></i>
+                        </div>
+                    </div>
+                    <div class="newsImage">
+                        <img src="~/Assets/img/blog5d.jpg" alt="">
+                    </div>
+                    <div class="newsContent">
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut suscipit odio ante, id dapibus elit condimentum vitae. Maecenas eget orci vitae enim accumsan mollis. In congue nunc velit, sit amet eleifend velit cursus vitae. Morbi lorem massa, lobortis id bibendum et, rhoncus porttitor tortor. Aenean eget orci pulvinar, tincidunt neque quis, aliquam lectus. Etiam nec malesuada tortor. Sed id condimentum turpis. Quisque non fermentum est. Integer lobortis turpis a justo dignissim, sit amet accumsan sem pulvinar. Morbi mollis vitae libero in rhoncus. Vestibulum at arcu faucibus, congue diam sit amet, viverra velit. Sed rutrum urna ut dolor dignissim suscipit. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas ultrices justo metus, quis facilisis justo interdum nec. Donec luctus ligula elit, eget varius urna sodales at. Mauris enim risus, cursus at nulla eget, mattis imperdiet orci.
+                            Suspendisse eget ullamcorper turpis. Donec condimentum pulvinar lorem, sit amet ultrices diam bibendum non. Suspendisse potenti.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
+                <div class="singleNewsRight">
+
+                    <input type="text" id="search" placeholder="Search">
+                    <button class="btn btn-info">
+                        <i class="fas fa-search"></i>
+                    </button>
+
+                    <div class="recentPosts">
+                        <div class="title">
+                            <h2>Recent Posts</h2>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <a href="/Home/Single"><p>Proin In Orci Quis Elit Blandit Imperdiet Enim</p></a>
+                            <a href="/Home/Single"><p>Sed Varius Eros Eu Lorem Condimentum Ac Rutrum</p></a>
+                            <a href="/Home/Single"><p>Curabitur Augue Nibh, Faucibus Id Faucibus In</p></a>
+                            <a href="/Home/Single"><p>Fusce Ut Hendrerit Ex, Nec Rutrum Nunc.</p></a>
+                            <a href="/Home/Single"><p>Ut Suscipit Odio Ante, Id Dapibus Elit Condimentum</p></a>
+                        </div>
+                    </div>
+                    <div class="recentPosts">
+                        <div class="title">
+                            <h2>Services</h2>
+                        </div>
+                        <div class="line"></div>
+                        <div class="content">
+                            <a href="/Home/Service"><h3>Fake-tooth</h3></a>
+                            <p>At our massage theraphy center, each massage is customized according to the client’s individual.</p>
+                            <a href="/Home/Service"><h3>Dental Care</h3></a>
+                            <p>We provide a wide range of oral health care services to patients, from routine checkups to fitting braces</p>
+                            <a href="/Home/Service"><h3>Tooth Protection</h3></a>
+                            <p>There are only 2 dental specialties that only focus on dental esthetics: Prosthodontics and Orthodontics</p>
+                            <a href="/Home/Service"><h3>Dental Calculus</h3></a>
+                            <p>Types of bridges may vary, depending upon how they are fabricated and the way they anchor to the adjacent teeth</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+            $(document).ready(function (e) {
+                var x;
+                $("#search").keyup(function (e) {
+                    x = $("#search").val();
+                    console.log(x);
+                    $.ajax({
+                        type: "Get",
+                        data: {
+                            search: x
+                        },
+                        url: "http://localhost:54738/Employees/Search",
+                        contentType: "Html",
+                        success: function (response) {
+                            $("#body").html(response)
+                        }
+                    })
+                })
+            })
+</script>
+

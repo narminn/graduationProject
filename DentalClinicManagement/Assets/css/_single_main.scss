@@ -1,0 +1,106 @@
+#singleMain{
+	width: 100%;
+	padding: 40px;
+	background-color:#fafafa;
+	.singleNews{
+		width: 100%;
+		padding: 40px;
+		background-color: #ffffff;
+		.singleNewsTitle{
+			width: 100%;
+			padding-bottom: 30px;
+			border-bottom: 1px solid $color_blue;
+			h1{
+				font-family: Marcellus;
+				font-size: 47px;
+				
+			}
+		}
+		.post{
+			width: 100%;
+			margin: 25px 0px;
+			padding: 10px 0px;
+			p{
+				float: left;
+			}
+			.calendar, .folder{
+				float:left;
+				margin-left: 10px;
+				svg{
+					float: left;
+					margin-right: 10px;
+					color: $color_blue;
+				}
+			}
+			.comment{
+				float:right;
+				svg{
+					color:$color_blue;
+					margin-left: 10px;
+				}
+			}
+		}
+		.newsImage{
+			width: 100%;
+			margin-top: 40px;
+			img{
+				width: 100%;
+			}
+		}
+		.newsContent{
+			width: 100%;
+			margin-top: 30px;
+			p{
+				font-size: 20px;
+				line-height: 32px;
+				font-family: $font_robota;
+			}
+		}
+	}
+	.singleNewsRight{
+		width: 100%;
+		
+		
+		input{
+			width: calc(100% - 50px);
+			padding: 10px 5px;
+			border: 1px solid $color_blue;
+			float: left;
+			margin-bottom: 30px;
+		}
+		button{
+			width: 50px;
+			padding: 8px 0px;
+			float: left;
+			background-color: $color_blue;
+			border-radius: 0px;
+			svg{
+				font-size: 20px;
+				color: white;
+			}
+		}
+	
+	.recentPosts{
+		width: 100%;
+		margin-top: 30px;
+		background-color: white;
+		padding: 20px; 
+		.line{
+			width: 50px;
+			height: 2px;
+			background-color: $color_blue;
+			margin-bottom: 10px;
+		}
+		.content{
+			a{
+				text-decoration: none;
+				color:black;
+			}
+			p{
+				font-size: 17px;
+			}
+		}
+	}
+	}
+
+}

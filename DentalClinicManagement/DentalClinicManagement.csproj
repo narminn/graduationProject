@@ -1,0 +1,673 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{71533A33-10A4-4D6C-B618-C563D47D3E6A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DentalClinicManagement</RootNamespace>
+    <AssemblyName>DentalClinicManagement</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.3\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ApplicationInsights">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.2.2.0\lib\net45\Microsoft.ApplicationInsights.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Agent.Intercept">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Agent.Intercept.2.0.6\lib\net45\Microsoft.AI.Agent.Intercept.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.DependencyCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.DependencyCollector.2.2.0\lib\net45\Microsoft.AI.DependencyCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.PerfCounterCollector">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.PerfCounterCollector.2.2.0\lib\net45\Microsoft.AI.PerfCounterCollector.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.ServerTelemetryChannel">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.TelemetryChannel.2.2.0\lib\net45\Microsoft.AI.ServerTelemetryChannel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.WindowsServer">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.WindowsServer.2.2.0\lib\net45\Microsoft.AI.WindowsServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AI.Web">
+      <HintPath>..\packages\Microsoft.ApplicationInsights.Web.2.2.0\lib\net45\Microsoft.AI.Web.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Accountant\AccountantAreaRegistration.cs" />
+    <Compile Include="Areas\Doctor\DoctorAreaRegistration.cs" />
+    <Compile Include="Areas\ManagementAdmin\ManagementAdminAreaRegistration.cs" />
+    <Compile Include="Areas\Reception\ReceptionAreaRegistration.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\WebAdmin\Controllers\NewsController.cs" />
+    <Compile Include="Areas\WebAdmin\WebAdminAreaRegistration.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Appointment.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Award.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Customer_quotes.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DentalClinicModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentalClinicModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DentalClinicModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\DentalClinicModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Dental_clinic_details.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Department.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Doctor.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Doctor_Attendence.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Expense.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Gender.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Holiday.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Leave.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Link.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MarrigeStatu.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Message.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\News.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Note.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Open_hours.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Patient.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Photo.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Service.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stuff_Atendes.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Stuff_Attendence.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Supplier.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\UserLogin.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\User_Roles.cs">
+      <DependentUpon>DentalClinicModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Assets\css\style.css" />
+    <Content Include="Assets\images\4373750.jpg" />
+    <Content Include="Assets\images\about.jpg" />
+    <Content Include="Assets\images\bg-6s.jpg" />
+    <Content Include="Assets\images\blog2d.jpg" />
+    <Content Include="Assets\images\blog3d-535x355.jpg" />
+    <Content Include="Assets\images\blog3d.jpg" />
+    <Content Include="Assets\images\blog4d.jpg" />
+    <Content Include="Assets\images\blog5d-535x355.jpg" />
+    <Content Include="Assets\images\blog5d.jpg" />
+    <Content Include="Assets\images\blog6d-535x355.jpg" />
+    <Content Include="Assets\images\blog6d.jpg" />
+    <Content Include="Assets\images\d1.jpg" />
+    <Content Include="Assets\images\dental-floss.png" />
+    <Content Include="Assets\images\dental-work-slide1-1040x425.jpg" />
+    <Content Include="Assets\images\doctor.jpg" />
+    <Content Include="Assets\images\envelopes.png" />
+    <Content Include="Assets\images\fake-tooth.png" />
+    <Content Include="Assets\images\holed-tooth.png" />
+    <Content Include="Assets\images\images.jpeg" />
+    <Content Include="Assets\images\logo-1.png" />
+    <Content Include="Assets\images\logo-2.png" />
+    <Content Include="Assets\images\logo-4.png" />
+    <Content Include="Assets\images\logo-huntu-style5-70.png" />
+    <Content Include="Assets\images\map-markers.png" />
+    <Content Include="Assets\images\phones.png" />
+    <Content Include="Assets\images\shiny-tooth.png" />
+    <Content Include="Assets\images\slide2.jpg" />
+    <Content Include="Assets\images\team1.jpg" />
+    <Content Include="Assets\images\team2.jpg" />
+    <Content Include="Assets\images\team3.jpg" />
+    <Content Include="Assets\images\team4.jpg" />
+    <Content Include="Assets\images\teeth-protection.png" />
+    <Content Include="Assets\images\tools-bg.jpg" />
+    <Content Include="Assets\img\about.jpg" />
+    <Content Include="Assets\img\bg-hero.jpg" />
+    <Content Include="Assets\img\blog2d.jpg" />
+    <Content Include="Assets\img\blog3d.jpg" />
+    <Content Include="Assets\img\blog4d.jpg" />
+    <Content Include="Assets\img\blog5d.jpg" />
+    <Content Include="Assets\img\blog6d.jpg" />
+    <Content Include="Assets\img\doctor.jpg" />
+    <Content Include="Assets\img\envelopes.png" />
+    <Content Include="Assets\img\intro.png" />
+    <Content Include="Assets\img\logo-1.png" />
+    <Content Include="Assets\img\logo-2.png" />
+    <Content Include="Assets\img\logo-4.png" />
+    <Content Include="Assets\img\logo-huntu.png" />
+    <Content Include="Assets\img\map-markers.png" />
+    <Content Include="Assets\img\phones.png" />
+    <Content Include="Assets\img\team1.jpg" />
+    <Content Include="Assets\img\team2.jpg" />
+    <Content Include="Assets\img\team3.jpg" />
+    <Content Include="Assets\img\team4.jpg" />
+    <Content Include="Assets\img\tools-bg.jpg" />
+    <Content Include="Assets\js\script.js" />
+    <Content Include="favicon.ico" />
+    <Content Include="Global.asax" />
+    <Content Include="Models\DentalClinicModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <LastGenOutput>DentalClinicModel.Context.cs</LastGenOutput>
+      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\DentalClinicModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
+      <LastGenOutput>DentalClinicModel.cs</LastGenOutput>
+    </Content>
+    <Content Include="ApplicationInsights.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Areas\WebAdmin\Views\web.config" />
+    <Content Include="Areas\ManagementAdmin\Views\web.config" />
+    <Content Include="Areas\Doctor\Views\web.config" />
+    <Content Include="Areas\Accountant\Views\web.config" />
+    <Content Include="Areas\Reception\Views\web.config" />
+    <Content Include="WebAdminAssets\css\sb-admin.css" />
+    <Content Include="WebAdminAssets\css\sb-admin.min.css" />
+    <Content Include="WebAdminAssets\js\sb-admin-charts.js" />
+    <Content Include="WebAdminAssets\js\sb-admin-charts.min.js" />
+    <Content Include="WebAdminAssets\js\sb-admin-datatables.js" />
+    <Content Include="WebAdminAssets\js\sb-admin-datatables.min.js" />
+    <Content Include="WebAdminAssets\js\sb-admin.js" />
+    <Content Include="WebAdminAssets\js\sb-admin.min.js" />
+    <Content Include="WebAdminAssets\pug\css\sb-admin.css" />
+    <Content Include="WebAdminAssets\pug\css\sb-admin.min.css" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin-charts.js" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin-charts.min.js" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin-datatables.js" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin-datatables.min.js" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin.js" />
+    <Content Include="WebAdminAssets\pug\js\sb-admin.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="WebAdminAssets\pug\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\chart.js\Chart.js" />
+    <Content Include="WebAdminAssets\pug\vendor\chart.js\Chart.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="WebAdminAssets\pug\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="WebAdminAssets\pug\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.min.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.slim.js" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.slim.min.js" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="WebAdminAssets\vendor\chart.js\Chart.bundle.js" />
+    <Content Include="WebAdminAssets\vendor\chart.js\Chart.bundle.min.js" />
+    <Content Include="WebAdminAssets\vendor\chart.js\Chart.js" />
+    <Content Include="WebAdminAssets\vendor\chart.js\Chart.min.js" />
+    <Content Include="WebAdminAssets\vendor\datatables\dataTables.bootstrap4.css" />
+    <Content Include="WebAdminAssets\vendor\datatables\dataTables.bootstrap4.js" />
+    <Content Include="WebAdminAssets\vendor\datatables\jquery.dataTables.js" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\css\font-awesome.css" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\css\font-awesome.min.css" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="WebAdminAssets\vendor\jquery-easing\jquery.easing.compatibility.js" />
+    <Content Include="WebAdminAssets\vendor\jquery-easing\jquery.easing.js" />
+    <Content Include="WebAdminAssets\vendor\jquery-easing\jquery.easing.min.js" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.js" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.min.js" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.slim.js" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.slim.min.js" />
+    <EntityDeploy Include="Models\DentalClinicModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DentalClinicModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\DentalClinicModel.edmx.diagram">
+      <DependentUpon>DentalClinicModel.edmx</DependentUpon>
+    </Content>
+    <Content Include="Areas\WebAdmin\Views\_ViewStart.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Home\Index.cshtml" />
+    <Content Include="Assets\css\style.css.map" />
+    <Content Include="Assets\css\style.scss" />
+    <Content Include="Assets\css\_about.scss" />
+    <Content Include="Assets\css\_all_news.scss" />
+    <Content Include="Assets\css\_appointment.scss" />
+    <Content Include="Assets\css\_booking.scss" />
+    <Content Include="Assets\css\_contact_main.scss" />
+    <Content Include="Assets\css\_contact_title.scss" />
+    <Content Include="Assets\css\_customer_quotes.scss" />
+    <Content Include="Assets\css\_doctor.scss" />
+    <Content Include="Assets\css\_footer.scss" />
+    <Content Include="Assets\css\_header.scss" />
+    <Content Include="Assets\css\_history.scss" />
+    <Content Include="Assets\css\_home_title.scss" />
+    <Content Include="Assets\css\_latestNews.scss" />
+    <Content Include="Assets\css\_news_title.scss" />
+    <Content Include="Assets\css\_openHours.scss" />
+    <Content Include="Assets\css\_services.scss" />
+    <Content Include="Assets\css\_single_main.scss" />
+    <Content Include="Assets\css\_slider.scss" />
+    <Content Include="Assets\css\_suppliers.scss" />
+    <Content Include="Assets\css\_team.scss" />
+    <Content Include="Assets\css\_welcome.scss" />
+    <Content Include="Assets\images\_DS_Store" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Accountant\Controllers\" />
+    <Folder Include="Areas\Accountant\Models\" />
+    <Folder Include="Areas\Accountant\Views\Shared\" />
+    <Folder Include="Areas\Doctor\Controllers\" />
+    <Folder Include="Areas\Doctor\Models\" />
+    <Folder Include="Areas\Doctor\Views\Shared\" />
+    <Folder Include="Areas\ManagementAdmin\Controllers\" />
+    <Folder Include="Areas\ManagementAdmin\Models\" />
+    <Folder Include="Areas\ManagementAdmin\Views\Shared\" />
+    <Folder Include="Areas\Reception\Controllers\" />
+    <Folder Include="Areas\Reception\Models\" />
+    <Folder Include="Areas\Reception\Views\Shared\" />
+    <Folder Include="Areas\WebAdmin\Models\" />
+    <Folder Include="Uploads\" />
+    <Folder Include="ViewModel\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\WebAdmin\Views\News\Create.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\News\Delete.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\News\Details.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\News\Edit.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\News\Index.cshtml" />
+    <None Include="packages.config" />
+    <Content Include="Views\Shared\HeaderPartial.cshtml" />
+    <Content Include="Views\Home\Booking.cshtml" />
+    <Content Include="Views\Home\Blog.cshtml" />
+    <Content Include="Views\Home\Single.cshtml" />
+    <Content Include="Views\Home\Doctor.cshtml" />
+    <Content Include="Views\Home\Service.cshtml" />
+    <Content Include="Views\Shared\PartialNewsSearch.cshtml" />
+    <Content Include="WebAdminAssets\pug\blank.pug" />
+    <Content Include="WebAdminAssets\pug\cards.pug" />
+    <Content Include="WebAdminAssets\pug\charts.pug" />
+    <Content Include="WebAdminAssets\pug\forgot-password.pug" />
+    <Content Include="WebAdminAssets\pug\includes\css\core.pug" />
+    <Content Include="WebAdminAssets\pug\includes\css\custom.pug" />
+    <Content Include="WebAdminAssets\pug\includes\footer.pug" />
+    <Content Include="WebAdminAssets\pug\includes\js\core.pug" />
+    <Content Include="WebAdminAssets\pug\includes\js\custom.pug" />
+    <Content Include="WebAdminAssets\pug\includes\modals\logout.pug" />
+    <Content Include="WebAdminAssets\pug\includes\navbar.pug" />
+    <Content Include="WebAdminAssets\pug\includes\scroll-to-top.pug" />
+    <Content Include="WebAdminAssets\pug\index.pug" />
+    <Content Include="WebAdminAssets\pug\login.pug" />
+    <Content Include="WebAdminAssets\pug\navbar.pug" />
+    <Content Include="WebAdminAssets\pug\pug\blank.pug" />
+    <Content Include="WebAdminAssets\pug\pug\cards.pug" />
+    <Content Include="WebAdminAssets\pug\pug\charts.pug" />
+    <Content Include="WebAdminAssets\pug\pug\forgot-password.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\css\core.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\css\custom.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\footer.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\js\core.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\js\custom.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\modals\logout.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\navbar.pug" />
+    <Content Include="WebAdminAssets\pug\pug\includes\scroll-to-top.pug" />
+    <Content Include="WebAdminAssets\pug\pug\index.pug" />
+    <Content Include="WebAdminAssets\pug\pug\login.pug" />
+    <Content Include="WebAdminAssets\pug\pug\navbar.pug" />
+    <Content Include="WebAdminAssets\pug\pug\register.pug" />
+    <Content Include="WebAdminAssets\pug\pug\tables.pug" />
+    <Content Include="WebAdminAssets\pug\register.pug" />
+    <Content Include="WebAdminAssets\pug\scss\navbar\_navbar_colors.scss" />
+    <Content Include="WebAdminAssets\pug\scss\navbar\_navbar_fixed.scss" />
+    <Content Include="WebAdminAssets\pug\scss\navbar\_navbar_global.scss" />
+    <Content Include="WebAdminAssets\pug\scss\navbar\_navbar_static.scss" />
+    <Content Include="WebAdminAssets\pug\scss\navbar\_navbar_toggle.scss" />
+    <Content Include="WebAdminAssets\pug\scss\sb-admin.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_cards.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_footer.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_global.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_login.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_mixins.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_utilities.scss" />
+    <Content Include="WebAdminAssets\pug\scss\_variables.scss" />
+    <Content Include="WebAdminAssets\pug\tables.pug" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="WebAdminAssets\pug\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\animated.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\core.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\icons.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\larger.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\list.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\mixins.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\path.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\stacked.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\less\variables.less" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.min.map" />
+    <Content Include="WebAdminAssets\pug\vendor\jquery\jquery.slim.min.map" />
+    <Content Include="WebAdminAssets\scss\navbar\_navbar_colors.scss" />
+    <Content Include="WebAdminAssets\scss\navbar\_navbar_fixed.scss" />
+    <Content Include="WebAdminAssets\scss\navbar\_navbar_global.scss" />
+    <Content Include="WebAdminAssets\scss\navbar\_navbar_static.scss" />
+    <Content Include="WebAdminAssets\scss\navbar\_navbar_toggle.scss" />
+    <Content Include="WebAdminAssets\scss\sb-admin.scss" />
+    <Content Include="WebAdminAssets\scss\_cards.scss" />
+    <Content Include="WebAdminAssets\scss\_footer.scss" />
+    <Content Include="WebAdminAssets\scss\_global.scss" />
+    <Content Include="WebAdminAssets\scss\_login.scss" />
+    <Content Include="WebAdminAssets\scss\_mixins.scss" />
+    <Content Include="WebAdminAssets\scss\_utilities.scss" />
+    <Content Include="WebAdminAssets\scss\_variables.scss" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="WebAdminAssets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\css\font-awesome.css.map" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\animated.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\bordered-pulled.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\core.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\fixed-width.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\font-awesome.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\icons.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\larger.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\list.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\mixins.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\path.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\rotated-flipped.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\screen-reader.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\stacked.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\less\variables.less" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\font-awesome.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_animated.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_core.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_icons.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_larger.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_list.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_mixins.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_path.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_stacked.scss" />
+    <Content Include="WebAdminAssets\vendor\font-awesome\scss\_variables.scss" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.min.map" />
+    <Content Include="WebAdminAssets\vendor\jquery\jquery.slim.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>50242</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:50242/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.2.1.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.7\build\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

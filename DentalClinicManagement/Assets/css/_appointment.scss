@@ -1,0 +1,58 @@
+#make_appointment{
+	width: 100%;
+	.parallax{
+		width: 100%;
+		
+		background-image: url(../img/about.jpg);
+		background-position: center center;
+		background-size: cover;
+		display: table;
+		background-attachment: fixed;
+		.overlay{
+			width: 100%;
+			padding: 20px 0px;
+			background-color: rgba(118, 196, 232,.7);
+			.container{
+				.row{
+					h4{
+						color: $color_white;
+						text-align: center;
+						font-size: 55px;
+						line-height: 80px;
+						margin-top: 50px;
+						font-family: Marcellus;
+						font-weight: 400;
+					}
+					p{
+						color: $color_white;
+						text-align: center;
+						font-size: 40px;
+					}
+					.button{
+						width: 250px;
+						border-radius: 40px;
+						padding: 15px 10px;
+						margin-top: 10px;
+						background-color: #ff8a8b;
+						position: relative;
+						left: calc(50% - 125px);
+						cursor: pointer;
+						transition: .5s ease;
+						a{
+							text-decoration: none;
+							p{
+							color: white;
+							text-align: center;
+							font-size: 14px;
+							margin-bottom: 0px;
+						}
+						}
+						&:hover{
+							border:3px solid white;
+						}
+					}
+				}
+			}
+		}
+	}
+}

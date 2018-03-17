@@ -1,0 +1,277 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="graduationProjectModelStoreContainer" CdmEntityContainer="graduationProjectEntities">
+    <EntitySetMapping Name="Appointments">
+      <EntityTypeMapping TypeName="graduationProjectModel.Appointment">
+        <MappingFragment StoreEntitySet="Appointment">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="patient_name" ColumnName="patient_name" />
+          <ScalarProperty Name="patient_email" ColumnName="patient_email" />
+          <ScalarProperty Name="patient_phone" ColumnName="patient_phone" />
+          <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+          <ScalarProperty Name="appoint_date" ColumnName="appoint_date" />
+          <ScalarProperty Name="appoint_hour" ColumnName="appoint_hour" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Awards">
+      <EntityTypeMapping TypeName="graduationProjectModel.Award">
+        <MappingFragment StoreEntitySet="Awards">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="award_name" ColumnName="award_name" />
+          <ScalarProperty Name="award_price" ColumnName="award_price" />
+          <ScalarProperty Name="award_date" ColumnName="award_date" />
+          <ScalarProperty Name="award_doctor_id" ColumnName="award_doctor_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Customer_quotes">
+      <EntityTypeMapping TypeName="graduationProjectModel.Customer_quotes">
+        <MappingFragment StoreEntitySet="Customer_quotes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="customer_name" ColumnName="customer_name" />
+          <ScalarProperty Name="customer_quote_text" ColumnName="customer_quote_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Dental_clinic_details">
+      <EntityTypeMapping TypeName="graduationProjectModel.Dental_clinic_details">
+        <MappingFragment StoreEntitySet="Dental_clinic_details">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="clinic_name" ColumnName="clinic_name" />
+          <ScalarProperty Name="clinic_about" ColumnName="clinic_about" />
+          <ScalarProperty Name="clinic_slogan" ColumnName="clinic_slogan" />
+          <ScalarProperty Name="clinic_phone" ColumnName="clinic_phone" />
+          <ScalarProperty Name="clinic_email" ColumnName="clinic_email" />
+          <ScalarProperty Name="clinic_address" ColumnName="clinic_address" />
+          <ScalarProperty Name="clinic_history" ColumnName="clinic_history" />
+          <ScalarProperty Name="clinic_ceo_name" ColumnName="clinic_ceo_name" />
+          <ScalarProperty Name="clinic_open_date" ColumnName="clinic_open_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Departments">
+      <EntityTypeMapping TypeName="graduationProjectModel.Department">
+        <MappingFragment StoreEntitySet="Departments">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="department_name" ColumnName="department_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctor_Attendence">
+      <EntityTypeMapping TypeName="graduationProjectModel.Doctor_Attendence">
+        <MappingFragment StoreEntitySet="Doctor_Attendence">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="stuff_fullname" ColumnName="stuff_fullname" />
+          <ScalarProperty Name="stuff_gender_id" ColumnName="stuff_gender_id" />
+          <ScalarProperty Name="stuff_marriage_status_id" ColumnName="stuff_marriage_status_id" />
+          <ScalarProperty Name="stuff_salary" ColumnName="stuff_salary" />
+          <ScalarProperty Name="stuff_phone" ColumnName="stuff_phone" />
+          <ScalarProperty Name="stuff_address" ColumnName="stuff_address" />
+          <ScalarProperty Name="stuff_mail" ColumnName="stuff_mail" />
+          <ScalarProperty Name="stuff_photo" ColumnName="stuff_photo" />
+          <ScalarProperty Name="stuff_start_date" ColumnName="stuff_start_date" />
+          <ScalarProperty Name="stuff_begin_time" ColumnName="stuff_begin_time" />
+          <ScalarProperty Name="stuff_end_time" ColumnName="stuff_end_time" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Doctors">
+      <EntityTypeMapping TypeName="graduationProjectModel.Doctor">
+        <MappingFragment StoreEntitySet="Doctors">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="doctor_fullname" ColumnName="doctor_fullname" />
+          <ScalarProperty Name="doctor_about" ColumnName="doctor_about" />
+          <ScalarProperty Name="doctor_photo" ColumnName="doctor_photo" />
+          <ScalarProperty Name="doctor_phone" ColumnName="doctor_phone" />
+          <ScalarProperty Name="doctor_address" ColumnName="doctor_address" />
+          <ScalarProperty Name="doctor_email" ColumnName="doctor_email" />
+          <ScalarProperty Name="doctor_depart_id" ColumnName="doctor_depart_id" />
+          <ScalarProperty Name="doctor_education_file" ColumnName="doctor_education_file" />
+          <ScalarProperty Name="doctor_salary" ColumnName="doctor_salary" />
+          <ScalarProperty Name="doctor_marrige_status_id" ColumnName="doctor_marrige_status_id" />
+          <ScalarProperty Name="doctor_begin_time" ColumnName="doctor_begin_time" />
+          <ScalarProperty Name="doctor_start_time" ColumnName="doctor_start_time" />
+          <ScalarProperty Name="doctor_start_date" ColumnName="doctor_start_date" />
+          <ScalarProperty Name="doctor_date_of_birth" ColumnName="doctor_date_of_birth" />
+          <ScalarProperty Name="doctor_gender_id" ColumnName="doctor_gender_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Expenses">
+      <EntityTypeMapping TypeName="graduationProjectModel.Expense">
+        <MappingFragment StoreEntitySet="Expense">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="product_name" ColumnName="product_name" />
+          <ScalarProperty Name="product_price" ColumnName="product_price" />
+          <ScalarProperty Name="expense_date" ColumnName="expense_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Genders">
+      <EntityTypeMapping TypeName="graduationProjectModel.Gender">
+        <MappingFragment StoreEntitySet="Gender">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="gender_name" ColumnName="gender_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Holidays">
+      <EntityTypeMapping TypeName="graduationProjectModel.Holiday">
+        <MappingFragment StoreEntitySet="Holidays">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="holiday_name" ColumnName="holiday_name" />
+          <ScalarProperty Name="holiday_date" ColumnName="holiday_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Leaves">
+      <EntityTypeMapping TypeName="graduationProjectModel.Leave">
+        <MappingFragment StoreEntitySet="Leave">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+          <ScalarProperty Name="leave_reason" ColumnName="leave_reason" />
+          <ScalarProperty Name="leave_date" ColumnName="leave_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Links">
+      <EntityTypeMapping TypeName="graduationProjectModel.Link">
+        <MappingFragment StoreEntitySet="Links">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="link1" ColumnName="link" />
+          <ScalarProperty Name="icon" ColumnName="icon" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MarrigeStatus">
+      <EntityTypeMapping TypeName="graduationProjectModel.MarrigeStatu">
+        <MappingFragment StoreEntitySet="MarrigeStatus">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="status_name" ColumnName="status_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Messages">
+      <EntityTypeMapping TypeName="graduationProjectModel.Message">
+        <MappingFragment StoreEntitySet="Message">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_name" ColumnName="user_name" />
+          <ScalarProperty Name="user_email" ColumnName="user_email" />
+          <ScalarProperty Name="message_subject" ColumnName="message_subject" />
+          <ScalarProperty Name="message_text" ColumnName="message_text" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="News">
+      <EntityTypeMapping TypeName="graduationProjectModel.News">
+        <MappingFragment StoreEntitySet="News">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="news_title" ColumnName="news_title" />
+          <ScalarProperty Name="news_content" ColumnName="news_content" />
+          <ScalarProperty Name="news_date" ColumnName="news_date" />
+          <ScalarProperty Name="news_photo" ColumnName="news_photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Notes">
+      <EntityTypeMapping TypeName="graduationProjectModel.Note">
+        <MappingFragment StoreEntitySet="Notes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="note_title" ColumnName="note_title" />
+          <ScalarProperty Name="note_content" ColumnName="note_content" />
+          <ScalarProperty Name="note_date" ColumnName="note_date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Open_hours">
+      <EntityTypeMapping TypeName="graduationProjectModel.Open_hours">
+        <MappingFragment StoreEntitySet="Open_hours">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="schedule" ColumnName="schedule" />
+          <ScalarProperty Name="hours" ColumnName="hours" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Patients">
+      <EntityTypeMapping TypeName="graduationProjectModel.Patient">
+        <MappingFragment StoreEntitySet="Patients">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="patient_fullname" ColumnName="patient_fullname" />
+          <ScalarProperty Name="patient_gender_id" ColumnName="patient_gender_id" />
+          <ScalarProperty Name="patient_marriage_status_id" ColumnName="patient_marriage_status_id" />
+          <ScalarProperty Name="patient_phone" ColumnName="patient_phone" />
+          <ScalarProperty Name="patient_address" ColumnName="patient_address" />
+          <ScalarProperty Name="patient_email" ColumnName="patient_email" />
+          <ScalarProperty Name="patient_payment" ColumnName="patient_payment" />
+          <ScalarProperty Name="date" ColumnName="date" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Photos">
+      <EntityTypeMapping TypeName="graduationProjectModel.Photo">
+        <MappingFragment StoreEntitySet="Photos">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="photo_name" ColumnName="photo_name" />
+          <ScalarProperty Name="photo_file" ColumnName="photo_file" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Services">
+      <EntityTypeMapping TypeName="graduationProjectModel.Service">
+        <MappingFragment StoreEntitySet="Services">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="services_name" ColumnName="services_name" />
+          <ScalarProperty Name="services_about" ColumnName="services_about" />
+          <ScalarProperty Name="services_photo" ColumnName="services_photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stuff_Atendes">
+      <EntityTypeMapping TypeName="graduationProjectModel.Stuff_Atendes">
+        <MappingFragment StoreEntitySet="Stuff_Atendes">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="doctor_status" ColumnName="doctor_status" />
+          <ScalarProperty Name="doctor_id" ColumnName="doctor_id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Stuff_Attendence">
+      <EntityTypeMapping TypeName="graduationProjectModel.Stuff_Attendence">
+        <MappingFragment StoreEntitySet="Stuff_Attendence">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="stuff_id" ColumnName="stuff_id" />
+          <ScalarProperty Name="stuff_status" ColumnName="stuff_status" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Suppliers">
+      <EntityTypeMapping TypeName="graduationProjectModel.Supplier">
+        <MappingFragment StoreEntitySet="Suppliers">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="supplier_photo" ColumnName="supplier_photo" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Roles">
+      <EntityTypeMapping TypeName="graduationProjectModel.User_Roles">
+        <MappingFragment StoreEntitySet="User_Roles">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="user_role_name" ColumnName="user_role_name" />
+          <ScalarProperty Name="user_role_mail" ColumnName="user_role_mail" />
+          <ScalarProperty Name="user_role_password" ColumnName="user_role_password" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="UserLogins">
+      <EntityTypeMapping TypeName="graduationProjectModel.UserLogin">
+        <MappingFragment StoreEntitySet="UserLogin">
+          <ScalarProperty Name="id" ColumnName="id" />
+          <ScalarProperty Name="admin_username" ColumnName="admin_username" />
+          <ScalarProperty Name="admin_password" ColumnName="admin_password" />
+          <ScalarProperty Name="admin_mail" ColumnName="admin_mail" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

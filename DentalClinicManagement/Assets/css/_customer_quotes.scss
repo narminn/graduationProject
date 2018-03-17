@@ -1,0 +1,63 @@
+#customer_quotes{
+	width: 100%;
+	.parallaxCustomer{
+		width: 100%;
+		height: 100%;
+		background-image: url(../img/doctor.jpg);
+		background-position: center center;
+		background-size: cover;
+		display: table;
+		background-attachment: fixed;
+		.overlay{
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0,0,0,.5);
+			.contentCustomer{
+				padding: 40px;
+				position: relative;
+				p{
+					color:$color_white;
+				    font-size: 30px;
+					line-height: 45px;
+					font-family: Roboto;
+    				font-weight: 300;
+					text-align: center;
+					margin-top: 30px;
+
+				}
+			}
+					.customer{
+						width: 200px;
+						height: 100px;
+						clear: both;
+						margin-bottom: 20px;
+						position: relative;
+						left: calc(50% - 100px);
+						.customerImage{
+							width: 60px;
+							height: 60px;
+							clear: both;
+							float: left;
+							img{
+								width: 100%;
+								height: 100%;
+								border-radius: 100%;
+								border: 3px solid white;
+								
+
+							}
+						}
+						.customerName{
+							float: left;
+							position: absolute;
+							left: 50%;
+							p{
+								color: $color_white;
+								font-size: 18px;
+
+							}
+						}
+					}
+				}
+			}
+		}

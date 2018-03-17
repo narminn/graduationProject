@@ -1,0 +1,51 @@
+﻿@model DentalClinicManagement.Models.News
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/WebAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>News</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.news_title)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_title)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_content)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_content)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_date)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_date)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.news_photo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.news_photo)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

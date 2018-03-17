@@ -1,0 +1,1150 @@
+body {
+  font-family: Marcellus;
+}
+
+@media (max-width: 992px) {
+  #welcome .appointment1 {
+    margin-top: 0px !important;
+  }
+}
+@media (max-width: 768px) {
+  body p, body span {
+    font-size: 16px !important;
+  }
+  body h4 {
+    font-size: 35px !important;
+  }
+  body #team .container .row .team_images .expert .overlay h4 {
+    font-size: 15px !important;
+  }
+  body #team .container .row .team_images .expert .overlay .icons svg {
+    font-size: 14px !important;
+  }
+  body #allNews .container .row .newsContent .date {
+    display: none !important;
+  }
+  body #allNews .container .row .newsContent .readMore a p {
+    font-size: 12px !important;
+  }
+  body #header .navbarMenu .navbarContact {
+    display: none;
+  }
+  body #welcome .second .submit {
+    padding: 10px 80px;
+  }
+  body #singleMain .singleNews .post {
+    display: none;
+  }
+}
+@media (max-width: 330px) {
+  #make_appointment .parallax .overlay .container .row .button {
+    width: 150px !important;
+  }
+
+  #singleMain .singleNewsRight input {
+    width: 200px !important;
+  }
+
+  #homeTitle h1 {
+    font-size: 30px !important;
+  }
+}
+#header {
+  width: 100%;
+  height: 110px;
+}
+#header .navbarHeader {
+  padding: 30px;
+}
+#header .navbarHeader img {
+  width: 100%;
+  height: auto;
+  position: relative;
+  margin-top: -20px;
+}
+#header .navbarMenu li {
+  margin-left: 5px;
+}
+#header .navbarMenu li a {
+  font-size: 20px;
+}
+#header .navbarMenu li a:hover {
+  color: #76c4e8;
+  border-bottom: 1px solid #76c4e8;
+}
+#header .navbarMenu .navbarContact {
+  width: 590px;
+  padding: 6px;
+  position: relative;
+  float: left;
+  margin-left: 50px;
+}
+#header .navbarMenu .navbarContact .hours, #header .navbarMenu .navbarContact .phone {
+  float: left;
+}
+#header .navbarMenu .navbarContact .hours svg, #header .navbarMenu .navbarContact .phone svg {
+  font-size: 36px;
+  float: left;
+  color: #76c4e8;
+}
+#header .navbarMenu .navbarContact .hours p, #header .navbarMenu .navbarContact .phone p {
+  float: left;
+  line-height: 35px;
+  margin-left: 10px;
+}
+#header .navbarMenu .navbarContact .hours p {
+  margin-right: 35px;
+}
+#header .navbarMenu .navbarContact .appointment {
+  float: right;
+}
+#header .navbarMenu .navbarContact .appointment .btnAppoint {
+  width: 150px;
+  border-radius: 40px;
+  padding: 10px;
+  background-color: #76c4e8;
+  cursor: pointer;
+  transition: .5s ease;
+}
+#header .navbarMenu .navbarContact .appointment .btnAppoint a {
+  text-decoration: none;
+}
+#header .navbarMenu .navbarContact .appointment .btnAppoint a p {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+#header .navbarMenu .navbarContact .appointment .btnAppoint:hover {
+  border: 2px solid white;
+}
+
+#about {
+  width: 100%;
+  height: 300px;
+}
+#about .parallaxAbout {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#about .parallaxAbout .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#about .parallaxAbout .overlay .container .row .title {
+  position: relative;
+}
+#about .parallaxAbout .overlay .container .row .title h1 {
+  color: white;
+  text-align: center;
+  font-size: 80px;
+  line-height: 80px;
+  margin-top: 60px;
+  font-family: Marcellus;
+}
+#about .parallaxAbout .overlay .container .row .content p {
+  font-size: 18px;
+  color: white;
+  text-align: center;
+  margin-top: 20px;
+}
+
+#history {
+  width: 100%;
+}
+#history .container .row .historyImage {
+  margin-top: 50px;
+  width: 100%;
+  height: 100%;
+}
+#history .container .row .historyImage img {
+  width: 100%;
+  height: auto;
+}
+#history .container .row .historyContent {
+  margin-top: 80px;
+  margin-left: 60px;
+}
+#history .container .row .historyContent p {
+  font-size: 35px;
+}
+#history .container .row .historyContent span {
+  font-size: 18px;
+}
+#history .container .row .historyContent .ceo {
+  font-size: 18px;
+  margin-top: 20px;
+  font-style: italic;
+}
+
+#customer_quotes {
+  width: 100%;
+}
+#customer_quotes .parallaxCustomer {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#customer_quotes .parallaxCustomer .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#customer_quotes .parallaxCustomer .overlay .contentCustomer {
+  padding: 40px;
+  position: relative;
+}
+#customer_quotes .parallaxCustomer .overlay .contentCustomer p {
+  color: white;
+  font-size: 30px;
+  line-height: 45px;
+  font-family: Roboto;
+  font-weight: 300;
+  text-align: center;
+  margin-top: 30px;
+}
+#customer_quotes .parallaxCustomer .overlay .customer {
+  width: 200px;
+  height: 100px;
+  clear: both;
+  margin-bottom: 20px;
+  position: relative;
+  left: calc(50% - 100px);
+}
+#customer_quotes .parallaxCustomer .overlay .customer .customerImage {
+  width: 60px;
+  height: 60px;
+  clear: both;
+  float: left;
+}
+#customer_quotes .parallaxCustomer .overlay .customer .customerImage img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 3px solid white;
+}
+#customer_quotes .parallaxCustomer .overlay .customer .customerName {
+  float: left;
+  position: absolute;
+  left: 50%;
+}
+#customer_quotes .parallaxCustomer .overlay .customer .customerName p {
+  color: white;
+  font-size: 18px;
+}
+
+#supplier {
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #76c4e8;
+}
+#supplier .container .row .supplier_text p {
+  color: white;
+  font-size: 32px;
+}
+#supplier .container .row .supplier_text span {
+  color: white;
+  font-size: 18px;
+}
+#supplier .container .row img {
+  width: 100%;
+}
+
+#team {
+  width: 100%;
+  padding: 120px 0px;
+}
+#team .container .row .team_title p {
+  color: #969fa8;
+  font-size: 23px;
+  text-align: center;
+}
+#team .container .row .team_title h1 {
+  text-align: center;
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+#team .container .row .team_images .expert {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  cursor: pointer;
+}
+#team .container .row .team_images .expert img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+#team .container .row .team_images .expert:hover .overlay {
+  display: block;
+}
+#team .container .row .team_images .expert .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(118, 196, 232, 0.7);
+  position: absolute;
+  top: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: 0.1 0.5s ease;
+  padding: 100px 10px;
+}
+#team .container .row .team_images .expert .overlay a {
+  text-decoration: none;
+}
+#team .container .row .team_images .expert .overlay a p {
+  color: white;
+  font-size: 24px;
+  text-align: center;
+  position: relative;
+}
+#team .container .row .team_images .expert .overlay h4 {
+  color: white;
+  font-style: italic;
+  text-align: center;
+  position: relative;
+}
+#team .container .row .team_images .expert .overlay .icons {
+  width: 100%;
+  text-align: center;
+}
+#team .container .row .team_images .expert .overlay .icons svg {
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  margin: 0px 10px;
+}
+
+#make_appointment {
+  width: 100%;
+}
+#make_appointment .parallax {
+  width: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#make_appointment .parallax .overlay {
+  width: 100%;
+  padding: 20px 0px;
+  background-color: rgba(118, 196, 232, 0.7);
+}
+#make_appointment .parallax .overlay .container .row h4 {
+  color: white;
+  text-align: center;
+  font-size: 55px;
+  line-height: 80px;
+  margin-top: 50px;
+  font-family: Marcellus;
+  font-weight: 400;
+}
+#make_appointment .parallax .overlay .container .row p {
+  color: white;
+  text-align: center;
+  font-size: 40px;
+}
+#make_appointment .parallax .overlay .container .row .button {
+  width: 250px;
+  border-radius: 40px;
+  padding: 15px 10px;
+  margin-top: 10px;
+  background-color: #ff8a8b;
+  position: relative;
+  left: calc(50% - 125px);
+  cursor: pointer;
+  transition: .5s ease;
+}
+#make_appointment .parallax .overlay .container .row .button a {
+  text-decoration: none;
+}
+#make_appointment .parallax .overlay .container .row .button a p {
+  color: white;
+  text-align: center;
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+#make_appointment .parallax .overlay .container .row .button:hover {
+  border: 3px solid white;
+}
+
+#footer {
+  width: 100%;
+  padding: 50px 0px;
+}
+#footer .logo_footer {
+  width: 100%;
+}
+#footer .copyright p {
+  color: #111111;
+  font-size: 17px;
+  line-height: 40px;
+  transition: .7s ease;
+  cursor: pointer;
+}
+#footer .copyright p:hover {
+  color: #76c4e8;
+}
+#footer .address p {
+  color: #111111;
+  font-size: 17px;
+  line-height: 40px;
+}
+#footer .icons {
+  margin-top: 10px;
+}
+#footer .icons svg {
+  font-size: 25px;
+  float: left;
+  margin: 0px 10px;
+  cursor: pointer;
+  transition: .7s ease;
+}
+#footer .icons svg:hover {
+  color: #76c4e8;
+}
+
+#newsTitle {
+  width: 100%;
+}
+#newsTitle .parallax {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#newsTitle .parallax .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#newsTitle .parallax .overlay .container .row .title {
+  width: 100%;
+  padding: 100px 20px;
+}
+#newsTitle .parallax .overlay .container .row .title h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#allNews {
+  width: 100%;
+  padding: 80px 0px;
+}
+
+#allNews .container .row .newsPhoto {
+  cursor: pointer;
+  overflow: hidden;
+}
+#allNews .container .row .newsPhoto img {
+  width: 100%;
+  height: 100%;
+}
+#allNews .container .row .newsPhoto:hover img {
+  transform: scale(1.2);
+  transition: all 1s ease-in;
+  filter: brightness(0.5);
+}
+#allNews .container .row .newsContent {
+  width: 100%;
+}
+#allNews .container .row .newsContent .title {
+  cursor: pointer;
+  padding: 10px;
+}
+#allNews .container .row .newsContent .title a {
+  color: black;
+  text-decoration: none;
+}
+#allNews .container .row .newsContent .title a p {
+  font-size: 20px;
+}
+#allNews .container .row .newsContent .title:hover a p {
+  color: #76c4e8;
+  transition: .8s ease;
+}
+#allNews .container .row .newsContent .line {
+  width: 100%;
+  height: 2px;
+  background-color: gray;
+}
+#allNews .container .row .newsContent .line .smalline {
+  width: 40%;
+  height: 2px;
+  background-color: #76c4e8;
+}
+#allNews .container .row .newsContent .date {
+  padding: 10px 0px;
+}
+#allNews .container .row .newsContent .date .calendar {
+  width: 50%;
+  float: left;
+  font-size: 10px;
+  margin-right: 10px;
+}
+#allNews .container .row .newsContent .date .calendar svg {
+  float: left;
+  margin-right: 10px;
+  color: #76c4e8;
+  font-size: 10px;
+}
+#allNews .container .row .newsContent .date .folder svg {
+  float: left;
+  margin-right: 10px;
+  color: #76c4e8;
+}
+#allNews .container .row .newsContent .date p {
+  font-size: 12px;
+}
+#allNews .container .row .newsContent .content p {
+  font-size: 20px;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: Roboto;
+}
+#allNews .container .row .newsContent .readMore {
+  width: 110px;
+  height: 40px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px solid black;
+  cursor: pointer;
+  transition: 1s ease;
+  position: relative;
+}
+#allNews .container .row .newsContent .readMore a {
+  color: black;
+  text-decoration: none;
+}
+#allNews .container .row .newsContent .readMore a p {
+  margin-bottom: 0px;
+  text-align: center;
+}
+#allNews .container .row .newsContent .readMore:hover {
+  background-color: #76c4e8;
+  border: none;
+}
+#allNews .container .row .newsContent .readMore:hover p {
+  color: white;
+}
+
+#contactTitle {
+  width: 100%;
+}
+#contactTitle .parallax {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#contactTitle .parallax .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#contactTitle .parallax .overlay .container .row .title {
+  width: 100%;
+  padding: 180px 20px;
+}
+#contactTitle .parallax .overlay .container .row .title h1 {
+  color: white;
+  font-size: 80px;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+#contactMain {
+  width: 100%;
+  padding: 40px 0px;
+  background-color: #fafafa;
+}
+#contactMain #map {
+  height: 500px;
+  width: 100%;
+  margin-bottom: 40px;
+}
+#contactMain .contactInfo {
+  width: 100%;
+  padding: 20px;
+}
+#contactMain .contactInfo .infoTitle {
+  width: 100%;
+  height: 160px;
+}
+#contactMain .contactInfo .infoTitle h3 {
+  color: #969fa8;
+}
+#contactMain .contactInfo .infoTitle p {
+  font-size: 18px;
+}
+#contactMain .contactInfo .infoContent {
+  width: 100%;
+  height: 300px;
+}
+#contactMain .contactInfo .infoContent .info {
+  width: 100%;
+  height: 100px;
+}
+#contactMain .contactInfo .infoContent .info .image {
+  float: left;
+  margin-right: 20px;
+}
+#contactMain .contactInfo .infoContent .info .text {
+  float: left;
+}
+#contactMain .contactInfo .infoContent .info .text h3 {
+  margin: 5px 0px;
+}
+#contactMain .contactInfo .infoContent .info .text p {
+  font-size: 17px;
+}
+#contactMain .contactForm {
+  width: 100%;
+  padding: 60px 20px;
+}
+#contactMain .contactForm form {
+  margin-top: 40px;
+}
+#contactMain .contactForm form .contactInputLast {
+  height: 150px;
+}
+#contactMain .contactForm form .contactBtn {
+  width: 100%;
+  background-color: #ff8a8b;
+  border-radius: 40px;
+  color: white;
+  padding: 10px 50px;
+  font-size: 18px;
+  cursor: pointer;
+  margin-top: 40px;
+}
+#contactMain .contactForm form .contactBtn:hover {
+  background-color: #cc6e6f;
+}
+#contactMain .contactForm form input {
+  width: 30%;
+  background-color: transparent;
+  box-shadow: none;
+  border: none;
+}
+
+#welcome {
+  width: 100%;
+  background: #f2f2f2;
+}
+#welcome .welcomeText {
+  width: 100%;
+  padding: 60px 10px;
+}
+#welcome .welcomeText h5 {
+  color: #b3b3b3;
+  letter-spacing: 5px;
+  font-size: 1em;
+}
+#welcome .welcomeText h2 {
+  line-height: 70px;
+  letter-spacing: 1.6px;
+}
+#welcome .welcomeText p {
+  color: #b3b3b3;
+  font-size: 18px;
+}
+#welcome .welcomeText li {
+  list-style-type: none;
+  font-size: 20px;
+}
+#welcome .welcomeText li svg {
+  color: #76c4e8;
+  margin-right: 10px;
+}
+#welcome .appointment1 {
+  width: 100%;
+  margin-top: -100px;
+}
+#welcome .first {
+  width: 100%;
+  height: 100px;
+  background: #99ddff;
+  color: #fff;
+  font-size: 1.7em;
+  text-align: center;
+  padding: 25px;
+}
+#welcome .second {
+  box-shadow: 5px 5px 5px #a6a6a6;
+  background: #fff;
+  padding: 50px 30px 50px 70px;
+}
+#welcome .second .Form {
+  float: left;
+  margin-right: 60px;
+}
+#welcome .second .Form input {
+  width: 180px;
+  border: none;
+  box-shadow: none;
+  border-top: 1px solid black;
+  border-radius: 0px;
+}
+#welcome .second .Form input:hover {
+  border-bottom: 1px solid black;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+  border-radius: 0px;
+}
+#welcome .second .submit {
+  width: 100%;
+  border-radius: 40px !important;
+  background: #ff9999;
+  border: none;
+  font-size: 1em;
+  font-family: "Courier New", Courier, monospace;
+}
+#welcome .second .submit p {
+  text-align: center !important;
+}
+#welcome .second .submit:hover {
+  background: black;
+}
+
+#homeTitle {
+  width: 100%;
+  padding: 50px 0px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#homeTitle h1 {
+  font-size: 60px;
+  color: white;
+  line-height: 70px;
+  font-family: Marcellous;
+}
+#homeTitle p {
+  font-size: 20px;
+  color: white;
+  line-height: 30px;
+}
+#homeTitle .btnContact {
+  width: 150px;
+  border-radius: 40px;
+  padding: 10px 5px;
+  background-color: #76c4e8;
+  cursor: pointer;
+  transition: .5s ease;
+}
+#homeTitle .btnContact a {
+  text-decoration: none;
+}
+#homeTitle .btnContact a p {
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  margin-bottom: 0px;
+}
+#homeTitle .btnContact:hover {
+  border: 2px solid white;
+}
+
+#services {
+  width: 100%;
+  padding: 50px 0px;
+}
+#services .textServices {
+  text-align: center;
+  padding: 50px;
+}
+#services .textServices h5 {
+  color: #969fa8;
+  font-family: "Karla", Sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+}
+#services .textServices h3 {
+  font-size: 32px;
+  font-family: Marcellus;
+}
+#services p {
+  color: #737373;
+  font-family: "Karla", Sans-serif;
+  font-size: 15px;
+}
+#services a {
+  text-decoration: none;
+}
+#services a h4 {
+  font-family: Marcellus;
+  letter-spacing: 1px;
+  color: #262626;
+}
+
+#open_hours {
+  width: 100%;
+}
+#open_hours .parallax {
+  width: 100%;
+  height: 100%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+#open_hours .parallax .col {
+  padding: 0px;
+}
+#open_hours .parallax .col .hours {
+  width: 100%;
+  height: 100%;
+  background-position: center right;
+  background-repeat: no-repeat;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 100px 50px;
+  position: relative;
+}
+#open_hours .parallax .col .hours .overlay {
+  background-color: #5cb9e8;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#open_hours .parallax .col .hours .title {
+  width: 100%;
+}
+#open_hours .parallax .col .hours .title h5 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  opacity: inherit;
+}
+#open_hours .parallax .col .hours .title h2 {
+  color: #fff;
+  font-family: Marcellus;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+#open_hours .parallax .col .hours .title p {
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: Roboto;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+#open_hours .parallax .col .hours .title li {
+  color: #fff;
+  font-size: 20px;
+  list-style-type: none;
+}
+#open_hours .parallax .col .hours .title li svg {
+  margin-right: 10px;
+}
+#open_hours .parallax .col .hours {
+  width: 100%;
+  height: 100%;
+  background: url("../images/bg-6s.jpg");
+  background-position: center right;
+  background-repeat: no-repeat;
+  transition: background 0.3s, border 0.3s, border-radius 0.3s, box-shadow 0.3s;
+  padding: 100px 50px;
+  position: relative;
+}
+#open_hours .parallax .col .hours .overlay {
+  background-color: #5cb9e8;
+  opacity: 0.2;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+}
+#open_hours .parallax .col .hours .title {
+  width: 100%;
+}
+#open_hours .parallax .col .hours .title h5 {
+  color: white;
+  text-transform: uppercase;
+  font-size: 15px;
+  letter-spacing: 3px;
+  opacity: inherit;
+}
+#open_hours .parallax .col .hours .title h2 {
+  color: #fff;
+  font-family: Marcellus;
+  letter-spacing: 2px;
+  line-height: 50px;
+}
+#open_hours .parallax .col .hours .title p {
+  color: #fff;
+  letter-spacing: 1px;
+  font-family: Roboto;
+  font-size: 20px;
+  margin-bottom: 40px;
+}
+#open_hours .parallax .col .hours .title li {
+  color: #fff;
+  font-size: 20px;
+  list-style-type: none;
+}
+#open_hours .parallax .col .hours .title li svg {
+  margin-right: 10px;
+}
+
+#latestNews .textNews {
+  text-align: center;
+  padding: 50px;
+}
+#latestNews .textNews h5 {
+  color: #969fa8;
+  font-family: "Karla", Sans-serif;
+  font-size: 16px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+#latestNews .textNews h3 {
+  font-size: 32px;
+  font-family: Marcellus;
+}
+#latestNews .box {
+  width: 100%;
+  overflow: hidden;
+}
+#latestNews .box img {
+  max-width: 100%;
+  height: auto;
+  transition: all 1s ease;
+}
+#latestNews .box img:hover {
+  transform: scale(1.2);
+}
+#latestNews .box .titleNews {
+  padding: 25px;
+}
+#latestNews .box .line {
+  width: 100%;
+  height: 2px;
+  background: #999999;
+}
+#latestNews .box .line .blue {
+  width: 40%;
+  height: 2px;
+  background: #66ccff;
+}
+#latestNews .box .date {
+  width: 100%;
+  padding: 20px;
+  font-size: 10px;
+  letter-spacing: 1px;
+  transition: .7s;
+}
+#latestNews .box .date:hover {
+  color: #66ccff;
+}
+#latestNews .box p {
+  padding: 20px;
+  color: #bfbfbf;
+}
+#latestNews .box .readMore {
+  width: 140px;
+  border: 1.2px solid black;
+  padding: 10px;
+  text-align: center;
+  margin-left: 20px;
+  transition: .5s;
+}
+#latestNews .box .readMore:hover {
+  background: #66ccff;
+  color: #fff;
+  border: none;
+}
+
+#slider {
+  width: 100%;
+}
+#slider .parallax {
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-size: cover;
+  display: table;
+  background-attachment: fixed;
+}
+#slider .parallax .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#slider .parallax .overlay .container .row .title {
+  width: 50%;
+  padding: 150px 20px;
+}
+#slider .parallax .overlay .container .row .title h1 {
+  color: white;
+  font-size: 80px;
+  margin-bottom: 0;
+}
+#slider .parallax .overlay .container .row .title p {
+  color: white;
+  font-size: 20px;
+}
+
+#singleMain {
+  width: 100%;
+  padding: 40px;
+  background-color: #fafafa;
+}
+#singleMain .singleNews {
+  width: 100%;
+  padding: 40px;
+  background-color: #ffffff;
+}
+#singleMain .singleNews .singleNewsTitle {
+  width: 100%;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #76c4e8;
+}
+#singleMain .singleNews .singleNewsTitle h1 {
+  font-family: Marcellus;
+  font-size: 47px;
+}
+#singleMain .singleNews .post {
+  width: 100%;
+  margin: 25px 0px;
+  padding: 10px 0px;
+}
+#singleMain .singleNews .post p {
+  float: left;
+}
+#singleMain .singleNews .post .calendar, #singleMain .singleNews .post .folder {
+  float: left;
+  margin-left: 10px;
+}
+#singleMain .singleNews .post .calendar svg, #singleMain .singleNews .post .folder svg {
+  float: left;
+  margin-right: 10px;
+  color: #76c4e8;
+}
+#singleMain .singleNews .post .comment {
+  float: right;
+}
+#singleMain .singleNews .post .comment svg {
+  color: #76c4e8;
+  margin-left: 10px;
+}
+#singleMain .singleNews .newsImage {
+  width: 100%;
+  margin-top: 40px;
+}
+#singleMain .singleNews .newsImage img {
+  width: 100%;
+}
+#singleMain .singleNews .newsContent {
+  width: 100%;
+  margin-top: 30px;
+}
+#singleMain .singleNews .newsContent p {
+  font-size: 20px;
+  line-height: 32px;
+  font-family: Roboto;
+}
+#singleMain .singleNewsRight {
+  width: 100%;
+}
+#singleMain .singleNewsRight input {
+  width: calc(100% - 50px);
+  padding: 10px 5px;
+  border: 1px solid #76c4e8;
+  float: left;
+  margin-bottom: 30px;
+}
+#singleMain .singleNewsRight button {
+  width: 50px;
+  padding: 8px 0px;
+  float: left;
+  background-color: #76c4e8;
+  border-radius: 0px;
+}
+#singleMain .singleNewsRight button svg {
+  font-size: 20px;
+  color: white;
+}
+#singleMain .singleNewsRight .recentPosts {
+  width: 100%;
+  margin-top: 30px;
+  background-color: white;
+  padding: 20px;
+}
+#singleMain .singleNewsRight .recentPosts .line {
+  width: 50px;
+  height: 2px;
+  background-color: #76c4e8;
+  margin-bottom: 10px;
+}
+#singleMain .singleNewsRight .recentPosts .content a {
+  text-decoration: none;
+  color: black;
+}
+#singleMain .singleNewsRight .recentPosts .content p {
+  font-size: 17px;
+}
+
+#aboutD {
+  width: 100%;
+}
+#aboutD .row {
+  width: 100%;
+  background: #b3f0ff;
+  padding: 4%;
+  box-shadow: 10px 10px 5px grey;
+  font-size: 1em;
+  letter-spacing: 1px;
+}
+#aboutD .row svg:hover {
+  color: #66ccff;
+  cursor: pointer;
+}
+#aboutD .name {
+  text-align: center;
+  padding: 10px;
+  font-size: 3.6em;
+  color: #fff;
+  text-shadow: 1px 1px 2px black, 0 0 25px #66ccff, 0 0 5px #66ccff;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background: #76c4e8;
+  border: none;
+  position: fixed;
+  bottom: 0px;
+  right: 40px;
+  border-radius: 100%;
+  box-shadow: 0px 2px 10px 0px rgba(19, 108, 191, 0.31);
+  display: none;
+  z-index: 88;
+  animation: circleMove .7s 1;
+}
+.circle:hover {
+  transition: .7s ease;
+}
+.circle svg {
+  margin-top: 6px;
+  font-size: 20px;
+}
