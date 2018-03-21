@@ -1,0 +1,78 @@
+﻿@model IEnumerable<DentalClinicManagement.Models.Patient>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Reception/Views/Shared/View.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-md-12 col-sm-12">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Patient FullName
+                </th>
+                <th>
+                    Patient Phone
+                </th>
+                <th>
+                    Patient Address
+                </th>
+                <th>
+                    Patient Email
+                </th>
+                <th>
+                    Patient Payment
+                </th>
+                <th>
+                    Patient Date
+                </th>
+                <th>
+                    Gender
+                </th>
+                <th>
+                    Marrige Status
+                </th>
+
+                @foreach (var item in Model)
+    {
+<tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patient_fullname)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patient_phone)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patient_address)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patient_email)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.patient_payment)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.date)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Gender.gender_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.MarrigeStatu.status_name)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

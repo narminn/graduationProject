@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DentalClinicManagement.Models.Expense>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/Accountant/Views/Shared/View.cshtml";
+}
+
+<h2>Expences</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-md-12 col-sm-12">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                    Product Name
+                </th>
+                <th>
+                    Product Price
+                </th>
+                <th>
+                    Expence Date
+                </th>
+
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.product_name)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.product_price)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.expense_date)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

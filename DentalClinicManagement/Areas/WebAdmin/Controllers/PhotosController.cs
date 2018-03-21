@@ -11,6 +11,7 @@ using System.IO;
 
 namespace DentalClinicManagement.Areas.WebAdmin.Controllers
 {
+    [User]
     public class PhotosController : Controller
     {
         private graduationProjectEntities db = new graduationProjectEntities();
