@@ -10,6 +10,7 @@ using DentalClinicManagement.Models;
 
 namespace DentalClinicManagement.Areas.WebAdmin.Controllers
 {
+    [User]
     public class Dental_clinic_detailsController : Controller
     {
         private graduationProjectEntities db = new graduationProjectEntities();

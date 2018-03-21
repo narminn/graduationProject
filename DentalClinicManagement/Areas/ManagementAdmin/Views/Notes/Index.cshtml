@@ -1,0 +1,48 @@
+﻿@model IEnumerable<DentalClinicManagement.Models.Note>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Areas/ManagementAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<div class="col-md-12 col-sm-12">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+        <thead>
+            <tr>
+                <th>
+                   Note Title
+                </th>
+                <th>
+                   Note Content
+                </th>
+                <th>
+                   Note Date
+                </th>
+
+                @foreach (var item in Model)
+                {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note_title)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note_content)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.note_date)
+                    </td>
+                    <td>
+                        @Html.ActionLink("Edit", "Edit", new { id = item.id }) |
+                        @Html.ActionLink("Details", "Details", new { id = item.id }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.id })
+                    </td>
+                </tr>
+            }
+
+        </table>
+    </div>

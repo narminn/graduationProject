@@ -1,0 +1,35 @@
+﻿@model DentalClinicManagement.Models.Stuff_Attendence
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Areas/ManagementAdmin/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Stuff_Attendence</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.stuff_status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.stuff_status)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Stuff_Attendence2.id)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Stuff_Attendence2.id)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

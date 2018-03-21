@@ -151,10 +151,20 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Areas\Accountant\AccountantAreaRegistration.cs" />
+    <Compile Include="Areas\Accountant\Controllers\ExpensesController.cs" />
     <Compile Include="Areas\Accountant\Controllers\HomeController.cs" />
-    <Compile Include="Areas\Accountant\Controllers\SignController.cs" />
-    <Compile Include="Areas\Doctor\DoctorAreaRegistration.cs" />
+    <Compile Include="Areas\Accountant\Controllers\Stuff_AttendenceController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\AwardsController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\DepartmentsController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\DoctorsController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\HolidaysController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\HomeController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\NotesController.cs" />
+    <Compile Include="Areas\ManagementAdmin\Controllers\Stuff_AttendenceController.cs" />
     <Compile Include="Areas\ManagementAdmin\ManagementAdminAreaRegistration.cs" />
+    <Compile Include="Areas\Reception\Controllers\HomeController.cs" />
+    <Compile Include="Areas\Reception\Controllers\PatientsController.cs" />
+    <Compile Include="Areas\Reception\Controllers\Stuff_AttendenceController.cs" />
     <Compile Include="Areas\Reception\ReceptionAreaRegistration.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\Customer_quotesController.cs" />
     <Compile Include="Areas\WebAdmin\Controllers\Dental_clinic_detailsController.cs" />
@@ -259,6 +269,7 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Areas\Accountant\css\main.css" />
@@ -325,7 +336,6 @@
     </Content>
     <Content Include="Areas\WebAdmin\Views\web.config" />
     <Content Include="Areas\ManagementAdmin\Views\web.config" />
-    <Content Include="Areas\Doctor\Views\web.config" />
     <Content Include="Areas\Accountant\Views\web.config" />
     <Content Include="Areas\Reception\Views\web.config" />
     <Content Include="Models\Model1.Context.tt">
@@ -453,18 +463,11 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Areas\Accountant\Models\" />
-    <Folder Include="Areas\Accountant\Views\Home\" />
-    <Folder Include="Areas\Accountant\Views\Shared\" />
-    <Folder Include="Areas\Doctor\Controllers\" />
-    <Folder Include="Areas\Doctor\Models\" />
-    <Folder Include="Areas\Doctor\Views\Shared\" />
-    <Folder Include="Areas\ManagementAdmin\Controllers\" />
     <Folder Include="Areas\ManagementAdmin\Models\" />
-    <Folder Include="Areas\ManagementAdmin\Views\Shared\" />
-    <Folder Include="Areas\Reception\Controllers\" />
     <Folder Include="Areas\Reception\Models\" />
-    <Folder Include="Areas\Reception\Views\Shared\" />
     <Folder Include="Areas\WebAdmin\Models\" />
+    <Folder Include="Areas\WebAdmin\Views\FilterAdmin\" />
+    <Folder Include="Filter\" />
     <Folder Include="Uploads\" />
     <Folder Include="ViewModel\" />
   </ItemGroup>
@@ -522,6 +525,64 @@
     <Content Include="Areas\WebAdmin\Views\Customer_quotes\Edit.cshtml" />
     <Content Include="Areas\WebAdmin\Views\Customer_quotes\Index.cshtml" />
     <Content Include="Areas\Accountant\Views\Sign\Index.cshtml" />
+    <Content Include="Areas\WebAdmin\Views\Home\Login.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Shared\_Layout.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Doctors\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Doctors\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Doctors\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Doctors\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Doctors\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Stuff_Attendence\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Stuff_Attendence\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Stuff_Attendence\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Stuff_Attendence\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Stuff_Attendence\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Home\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Departments\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Departments\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Departments\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Departments\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Departments\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Awards\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Awards\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Awards\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Awards\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Awards\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Holidays\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Holidays\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Holidays\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Holidays\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Holidays\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Notes\Create.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Notes\Delete.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Notes\Details.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Notes\Edit.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Notes\Index.cshtml" />
+    <Content Include="Areas\ManagementAdmin\Views\Home\Login.cshtml" />
+    <Content Include="Areas\Reception\Views\Shared\View.cshtml" />
+    <Content Include="Areas\Reception\Views\Patients\Create.cshtml" />
+    <Content Include="Areas\Reception\Views\Patients\Delete.cshtml" />
+    <Content Include="Areas\Reception\Views\Patients\Details.cshtml" />
+    <Content Include="Areas\Reception\Views\Patients\Edit.cshtml" />
+    <Content Include="Areas\Reception\Views\Patients\Index.cshtml" />
+    <Content Include="Areas\Reception\Views\Stuff_Attendence\Create.cshtml" />
+    <Content Include="Areas\Reception\Views\Stuff_Attendence\Delete.cshtml" />
+    <Content Include="Areas\Reception\Views\Stuff_Attendence\Details.cshtml" />
+    <Content Include="Areas\Reception\Views\Stuff_Attendence\Edit.cshtml" />
+    <Content Include="Areas\Reception\Views\Stuff_Attendence\Index.cshtml" />
+    <Content Include="Areas\Reception\Views\Home\Index.cshtml" />
+    <Content Include="Areas\Accountant\Views\Shared\View.cshtml" />
+    <Content Include="Areas\Accountant\Views\Home\View.cshtml" />
+    <Content Include="Areas\Accountant\Views\Expenses\Create.cshtml" />
+    <Content Include="Areas\Accountant\Views\Expenses\Delete.cshtml" />
+    <Content Include="Areas\Accountant\Views\Expenses\Details.cshtml" />
+    <Content Include="Areas\Accountant\Views\Expenses\Edit.cshtml" />
+    <Content Include="Areas\Accountant\Views\Expenses\Index.cshtml" />
+    <Content Include="Areas\Accountant\Views\Stuff_Attendence\Create.cshtml" />
+    <Content Include="Areas\Accountant\Views\Stuff_Attendence\Delete.cshtml" />
+    <Content Include="Areas\Accountant\Views\Stuff_Attendence\Details.cshtml" />
+    <Content Include="Areas\Accountant\Views\Stuff_Attendence\Edit.cshtml" />
+    <Content Include="Areas\Accountant\Views\Stuff_Attendence\Index.cshtml" />
     <None Include="packages.config" />
     <Content Include="Views\Shared\HeaderPartial.cshtml" />
     <Content Include="Views\Home\Booking.cshtml" />

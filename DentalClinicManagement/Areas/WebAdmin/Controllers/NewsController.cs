@@ -11,6 +11,7 @@ using DentalClinicManagement.Models;
 
 namespace DentalClinicManagement.Areas.WebAdmin.Controllers
 {
+    [User]
     public class NewsController : Controller
     {
         private graduationProjectEntities db = new graduationProjectEntities();
